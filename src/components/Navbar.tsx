@@ -19,7 +19,7 @@ export function Navbar() {
     };
   }, [isMobileMenuOpen]);
 
-  const logoSrc = resolvedTheme === 'dark' ? '../public/CAPE_D.png' : '../public/CAPE_L.png';
+  const logoSrc = resolvedTheme === 'dark' ? '/CAPE_D.png' : '/CAPE_L.png';
 
   const navLinks = [
     { name: 'About', href: '#about' },

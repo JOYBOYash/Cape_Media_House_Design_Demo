@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@theme {
+  --color-accent: var(--accent);
+  --color-primary: var(--primary);
+  --color-background: var(--bg);
+  --color-foreground: var(--fg);
+  
+  --font-header: "Arial Black", sans-serif;
+  --font-body: "Helvetica", sans-serif;
+  --font-cta: "Courier New", monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--accent);
+    color: var(--bg);
+  }
+
+  :root {
+    --bg: #F5F5F5; /* Soft off-white to reduce glare */
+    --fg: #000000;
+    --primary: #CCFF00;
+    --accent: #CCFF00;
+    --overlay: rgba(0, 0, 0, 0.85);
+  }
+  
+  .dark {
+    --bg: #050505;
+    --fg: #FFFFFF;
+    --primary: #CCFF00;
+    --accent: #CCFF00;
+    --overlay: rgba(0, 0, 0, 0.9);
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-body);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-header);
+    text-transform: uppercase;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--bg);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #222;
+    border-radius: 0;
+    transition: background 0.3s ease;
+  }
+
+  .dark ::-webkit-scrollbar-thumb {
+    background: #333;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent);
+  }
+
+  /* Cursor Reset */
+  * {
+    cursor: none !important;
+  }
+}
+
+/* Custom Utilities from Clean Minimalism Theme */
+.card-tilt {
+  transform: rotate(-2deg);
+}
+
+.accent-glow {
+  box-shadow: 0 0 20px rgba(204, 255, 0, 0.3);
+}
+
+.text-lime {
+  color: var(--accent);
+}
+
+.bg-lime {
+  background-color: var(--accent);
+}
+
+.border-lime {
+  border-color: var(--accent);
+}
+
+/* Existing Utilities */
+.text-balance {
+  text-wrap: balance;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.text-outline {
+  -webkit-text-stroke: 1px var(--fg);
+  color: transparent;
+}
+
+.dark .text-outline {
+  -webkit-text-stroke: 1px var(--fg);
+}
+

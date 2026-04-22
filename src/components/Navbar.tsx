@@ -33,7 +33,7 @@ export function Navbar() {
     <>
       <nav 
         className={cn(
-          "absolute top-0 left-0 w-full z-[110] py-8 px-6 md:px-12 flex justify-between items-center transition-colors duration-500",
+          "absolute top-0 left-0 w-full z-[110] py-8 px-8 md:px-12 flex justify-between items-center transition-colors duration-500",
           isMobileMenuOpen ? "text-background" : ""
         )}
       >

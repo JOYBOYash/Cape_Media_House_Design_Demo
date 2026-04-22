@@ -20,7 +20,7 @@ export function Footer() {
   return (
     <footer className="relative bg-background border-t border-foreground/5 pt-24 overflow-hidden">
       {/* Mega CTA */}
-      <div id="reach-us" className="px-6 md:px-12 pb-24 border-b border-foreground/5 overflow-hidden">
+      <div id="reach-us" className="px-8 md:px-12 pb-24 border-b border-foreground/5 overflow-hidden">
         <div ref={ref} className="max-w-7xl mx-auto flex flex-col items-start text-left gap-10">
           <motion.div 
             initial={{ opacity: 0, scale: 0.8 }}

@@ -11,9 +11,21 @@ export function CustomCursor() {
   
   const [isHovered, setIsHovered] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    // Only show cursor on devices that likely have a precise pointing device (mouse)
+    const checkVisibility = () => {
+      const isTouch = window.matchMedia('(pointer: coarse)').matches;
+      const isLargeScreen = window.innerWidth >= 1024;
+      setIsVisible(!isTouch && isLargeScreen);
+    };
+
+    checkVisibility();
+    window.addEventListener('resize', checkVisibility);
+
     const moveCursor = (e: MouseEvent) => {
+      if (!isVisible) return;
       cursorX.set(e.clientX);
       cursorY.set(e.clientY);
     };
@@ -39,12 +51,15 @@ export function CustomCursor() {
     window.addEventListener('mouseover', handleMouseOver);
 
     return () => {
+      window.removeEventListener('resize', checkVisibility);
       window.removeEventListener('mousemove', moveCursor);
       window.removeEventListener('mousedown', handleMouseDown);
       window.removeEventListener('mouseup', handleMouseUp);
       window.removeEventListener('mouseover', handleMouseOver);
     };
-  }, [cursorX, cursorY]);
+  }, [cursorX, cursorY, isVisible]);
+
+  if (!isVisible) return null;
 
   return (
     <>

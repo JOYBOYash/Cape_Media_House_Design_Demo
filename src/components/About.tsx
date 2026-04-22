@@ -15,7 +15,7 @@ export function About() {
   });
 
   return (
-    <section id="about" className="py-24 md:py-40 px-6 md:px-12 bg-background relative z-10">
+    <section id="about" className="py-24 md:py-40 px-8 md:px-12 bg-background relative z-10">
       <div ref={ref} className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32 items-center">
         <div className="relative flex items-center justify-center min-h-[500px]">
           {/* Enhanced rotating ring with blurry and particle effect */}

@@ -16,7 +16,7 @@ export function Partners() {
 
   return (
     <section className="py-20 bg-background border-b border-foreground/5 overflow-hidden">
-      <div ref={ref} className="max-w-7xl mx-auto px-6 md:px-12 mb-12">
+      <div ref={ref} className="max-w-7xl mx-auto px-8 md:px-12 mb-12">
         <motion.div 
           initial={{ opacity: 0, x: -20 }}
           animate={inView ? { opacity: 1, x: 0 } : {}}

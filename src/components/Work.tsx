@@ -36,7 +36,7 @@ export function Work() {
   const [hoveredIdx, setHoveredIdx] = React.useState<number | null>(null);
 
   return (
-    <section id="work" className="py-24 md:py-40 px-6 md:px-12 bg-background relative overflow-hidden">
+    <section id="work" className="py-24 md:py-40 px-8 md:px-12 bg-background relative overflow-hidden">
       {/* High-intensity focus overlay */}
       <AnimatePresence>
         {hoveredIdx !== null && (

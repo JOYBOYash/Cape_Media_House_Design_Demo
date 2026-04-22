@@ -34,7 +34,7 @@ export function Hero() {
       ref={containerRef}
       id="home"
       onMouseMove={handleMouseMove}
-      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 md:px-12 pt-20"
+      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-8 md:px-12 pt-20"
     >
       {/* Background Elements */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
@@ -125,7 +125,7 @@ export function Hero() {
             </motion.div>
           </div>
 
-          <h1 className="font-header text-[clamp(44px,11vw,130px)] font-black leading-[0.8] tracking-tighter text-balance">
+          <h1 className="font-header text-[clamp(40px,11vw,130px)] font-black leading-[0.8] tracking-tighter text-balance">
             <div className="overflow-hidden py-2">
               <motion.span
                 initial={{ y: "100%", skewY: 10 }}

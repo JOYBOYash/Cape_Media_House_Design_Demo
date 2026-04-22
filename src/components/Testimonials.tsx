@@ -28,7 +28,7 @@ export function Testimonials() {
   const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.1 });
 
   return (
-    <section id="testimonials" className="py-24 md:py-40 px-6 md:px-12 bg-background border-y border-foreground/5 relative overflow-hidden">
+    <section id="testimonials" className="py-24 md:py-40 px-8 md:px-12 bg-background border-y border-foreground/5 relative overflow-hidden">
       {/* Visual background noise/shapes */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-[10%] left-[-5%] w-96 h-96 bg-accent/5 blur-[100px] rounded-full" />

@@ -34,7 +34,7 @@ export function Services() {
   const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.1 });
 
   return (
-    <section id="services" className="py-24 md:py-40 px-6 md:px-12 bg-foreground/5 relative overflow-hidden">
+    <section id="services" className="py-24 md:py-40 px-8 md:px-12 bg-foreground/5 relative overflow-hidden">
       <div ref={ref} className="max-w-7xl mx-auto flex flex-col gap-16 md:gap-24">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
           <div className="flex flex-col gap-6">

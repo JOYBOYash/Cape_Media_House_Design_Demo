@@ -48,7 +48,7 @@ export function Philosophy() {
             initial={{ opacity: 0, y: 50 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ delay: 0.2, duration: 1 }}
-            className="font-header text-5xl md:text-[clamp(64px,10vw,120px)] font-black leading-[0.85] tracking-tighter max-w-4xl"
+            className="font-header text-4xl md:text-[clamp(64px,10vw,120px)] font-black leading-[0.85] tracking-tighter max-w-4xl"
           >
             {String} ATTRACT. <br />
             <span className="text-accent underline decoration-4 underline-offset-8">IMPACT</span> <br />

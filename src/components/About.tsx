@@ -48,10 +48,10 @@ export function About() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="flex flex-row items-center gap-6 md:gap-10"
+              className="flex flex-col md:flex-row items-center gap-2 md:gap-10"
             >
               <span className="font-header text-[clamp(100px,18vw,240px)] font-black leading-none text-accent drop-shadow-[0_0_30px_rgba(204,255,0,0.2)]">07</span>
-              <div className="flex flex-col items-start justify-center">
+              <div className="flex flex-col items-center md:items-start justify-center">
                 <motion.span 
                   initial={{ opacity: 0 }}
                   animate={inView ? { opacity: 1 } : {}}

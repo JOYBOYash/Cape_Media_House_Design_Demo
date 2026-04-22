@@ -21,7 +21,7 @@ export function Footer() {
     <footer className="relative bg-background border-t border-foreground/5 pt-24 overflow-hidden">
       {/* Mega CTA */}
       <div id="reach-us" className="px-8 md:px-12 pb-24 border-b border-foreground/5 overflow-hidden">
-        <div ref={ref} className="max-w-7xl mx-auto flex flex-col items-start text-left gap-10">
+        <div ref={ref} className="max-w-7xl mx-auto flex flex-col items-center text-center gap-10">
           <motion.div 
             initial={{ opacity: 0, scale: 0.8 }}
             animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
@@ -114,6 +114,13 @@ export function Footer() {
                  Join
                </button>
              </div>
+             
+             <button 
+               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+               className="md:hidden mt-8 flex items-center justify-center gap-2 border border-foreground/20 py-4 font-cta text-xs uppercase font-bold tracking-widest hover:bg-accent hover:text-black hover:border-accent transition-colors"
+             >
+               Go Back To Top
+             </button>
           </div>
         </div>
       </div>

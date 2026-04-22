@@ -176,14 +176,14 @@ export function Hero() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 1.2 }}
-            className="flex gap-4"
+            className="flex flex-col md:flex-row w-full md:w-auto gap-4"
           >
-            <button className="group relative flex items-center gap-3 bg-accent text-black font-cta font-black uppercase py-5 px-10 rounded-none overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95 accent-glow">
+            <button className="group w-full md:w-auto relative flex justify-center items-center gap-3 bg-accent text-black font-cta font-black uppercase py-5 px-10 rounded-none overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95 accent-glow">
               <span className="relative z-10">Start a Project</span>
               <ArrowUpRight size={20} className="relative z-10 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
             </button>
-            <button className="group border border-foreground/20 font-cta font-black uppercase py-5 px-10 rounded-none hover:bg-foreground hover:text-background transition-all duration-300">
+            <button className="group w-full md:w-auto border border-foreground/20 font-cta font-black uppercase py-5 px-10 rounded-none hover:bg-foreground hover:text-background transition-all duration-300">
               Our Showreel
             </button>
           </motion.div>
